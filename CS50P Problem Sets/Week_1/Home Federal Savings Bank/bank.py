@@ -4,7 +4,7 @@ def main():
 
 def con():
     if x == "hello":
-    print("$0")
+        print("$0")
     elif x.startswith("h"):
         print("$20")
     else:
