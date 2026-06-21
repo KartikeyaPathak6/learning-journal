@@ -1,25 +1,27 @@
 def main():
-    x=input("File name: ").strip().lower()
+    x = input("File name: ").strip().lower()
     ext(x)
-    return 0
 
 def ext(e):
-    match e:
-        
-        case e.endswith(".gif"):
-            print("image/gif")
-        case e.endswith(".jpg"):
-            print("image/jpg")
-        case e.endswith(".jpeg"):
-            print("image/jpeg")
-        case e.endswith(".png"):
-            print("image/png")
-        case e.endswith(".pdf"):
-            print("file/pdf")
-        case e.endswith(".txt"):
-            print("file/text")
-        case e.endswith(".zip"):
-            print("file/zip")
-    return e
+    if e.endswith(".gif"):
+        print("image/gif")
+
+    elif e.endswith(".jpg") or e.endswith(".jpeg"):
+        print("image/jpeg")
+
+    elif e.endswith(".png"):
+        print("image/png")
+
+    elif e.endswith(".pdf"):
+        print("application/pdf")
+
+    elif e.endswith(".txt"):
+        print("text/plain")
+
+    elif e.endswith(".zip"):
+        print("application/zip")
+
+    else:
+        print("application/octet-stream")
 
 main()
